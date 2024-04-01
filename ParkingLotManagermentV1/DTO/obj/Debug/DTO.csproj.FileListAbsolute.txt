@@ -1,0 +1,6 @@
+E:\winforms_cache\CuoiKy\WF_ParkingLotManagerment\ParkingLotManagermentV1\DTO\bin\Debug\DTO.dll
+E:\winforms_cache\CuoiKy\WF_ParkingLotManagerment\ParkingLotManagermentV1\DTO\bin\Debug\DTO.pdb
+E:\winforms_cache\CuoiKy\WF_ParkingLotManagerment\ParkingLotManagermentV1\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\winforms_cache\CuoiKy\WF_ParkingLotManagerment\ParkingLotManagermentV1\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\winforms_cache\CuoiKy\WF_ParkingLotManagerment\ParkingLotManagermentV1\DTO\obj\Debug\DTO.dll
+E:\winforms_cache\CuoiKy\WF_ParkingLotManagerment\ParkingLotManagermentV1\DTO\obj\Debug\DTO.pdb
