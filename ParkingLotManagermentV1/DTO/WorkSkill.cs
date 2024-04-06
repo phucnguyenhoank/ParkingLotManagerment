@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class WorkSkills
+    public class WorkSkill
     {
         public string EmployeeID { get; set; }
         public string JobID { get; set; }
+
+        public WorkSkill(string employeeID = "defaultEmployeeID", string jobID = "defaultJobID")
+        {
+            EmployeeID = employeeID;
+            JobID = jobID;
+        }
     }
 }

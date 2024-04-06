@@ -1,4 +1,4 @@
-﻿namespace ParkingLotManagerment
+﻿namespace ParkingLotManagement
 {
     partial class FrmAddCustomer
     {
@@ -38,6 +38,7 @@
             this.txtCitizenNumber = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtCustomerAddress = new System.Windows.Forms.TextBox();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -120,11 +121,22 @@
             this.txtCustomerAddress.Size = new System.Drawing.Size(100, 22);
             this.txtCustomerAddress.TabIndex = 9;
             // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.Location = new System.Drawing.Point(410, 357);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(75, 23);
+            this.btnAddCustomer.TabIndex = 10;
+            this.btnAddCustomer.Text = "Add";
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            // 
             // FrmAddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.txtCustomerAddress);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtCitizenNumber);
@@ -137,6 +149,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAddCustomer";
             this.Text = "Add Customer";
+            this.Load += new System.EventHandler(this.FrmAddCustomer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +167,6 @@
         private System.Windows.Forms.TextBox txtCitizenNumber;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.TextBox txtCustomerAddress;
+        private System.Windows.Forms.Button btnAddCustomer;
     }
 }

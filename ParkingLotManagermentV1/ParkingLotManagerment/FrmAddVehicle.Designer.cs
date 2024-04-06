@@ -38,10 +38,13 @@
             this.txtLicensePlate = new System.Windows.Forms.TextBox();
             this.txtOccupancy = new System.Windows.Forms.TextBox();
             this.cbTypeOfVehicle = new System.Windows.Forms.ComboBox();
-            this.txtCustomerIDAddVehicle = new System.Windows.Forms.TextBox();
-            this.txtParkingSpotIDAddVehicle = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnAddVehicle = new System.Windows.Forms.Button();
+            this.cbCustomerIDAddVehicle = new System.Windows.Forms.ComboBox();
+            this.cbParkingSpotIDAddVehicle = new System.Windows.Forms.ComboBox();
+            this.btnCustomerMoreDetail = new System.Windows.Forms.Button();
+            this.btnParkingSpotMoreDetail = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -92,7 +95,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(112, 351);
+            this.label6.Location = new System.Drawing.Point(117, 362);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 16);
             this.label6.TabIndex = 5;
@@ -121,30 +124,17 @@
             // 
             // cbTypeOfVehicle
             // 
+            this.cbTypeOfVehicle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTypeOfVehicle.FormattingEnabled = true;
             this.cbTypeOfVehicle.Location = new System.Drawing.Point(313, 244);
             this.cbTypeOfVehicle.Name = "cbTypeOfVehicle";
             this.cbTypeOfVehicle.Size = new System.Drawing.Size(121, 24);
             this.cbTypeOfVehicle.TabIndex = 9;
             // 
-            // txtCustomerIDAddVehicle
-            // 
-            this.txtCustomerIDAddVehicle.Location = new System.Drawing.Point(254, 304);
-            this.txtCustomerIDAddVehicle.Name = "txtCustomerIDAddVehicle";
-            this.txtCustomerIDAddVehicle.Size = new System.Drawing.Size(100, 22);
-            this.txtCustomerIDAddVehicle.TabIndex = 10;
-            // 
-            // txtParkingSpotIDAddVehicle
-            // 
-            this.txtParkingSpotIDAddVehicle.Location = new System.Drawing.Point(254, 351);
-            this.txtParkingSpotIDAddVehicle.Name = "txtParkingSpotIDAddVehicle";
-            this.txtParkingSpotIDAddVehicle.Size = new System.Drawing.Size(100, 22);
-            this.txtParkingSpotIDAddVehicle.TabIndex = 11;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(380, 304);
+            this.label7.Location = new System.Drawing.Point(453, 331);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(455, 16);
             this.label7.TabIndex = 12;
@@ -153,22 +143,73 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(367, 357);
+            this.label8.Location = new System.Drawing.Point(388, 401);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(579, 16);
             this.label8.TabIndex = 13;
             this.label8.Text = "Tương tự với Parking Spot, nhưng cân nhắc việc có cần phải có chức năng thêm bãi " +
     "đỗ hay không";
             // 
+            // btnAddVehicle
+            // 
+            this.btnAddVehicle.Location = new System.Drawing.Point(500, 525);
+            this.btnAddVehicle.Name = "btnAddVehicle";
+            this.btnAddVehicle.Size = new System.Drawing.Size(75, 23);
+            this.btnAddVehicle.TabIndex = 14;
+            this.btnAddVehicle.Text = "Add";
+            this.btnAddVehicle.UseVisualStyleBackColor = true;
+            this.btnAddVehicle.Click += new System.EventHandler(this.btnAddVehicle_Click);
+            // 
+            // cbCustomerIDAddVehicle
+            // 
+            this.cbCustomerIDAddVehicle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCustomerIDAddVehicle.FormattingEnabled = true;
+            this.cbCustomerIDAddVehicle.Location = new System.Drawing.Point(253, 304);
+            this.cbCustomerIDAddVehicle.Name = "cbCustomerIDAddVehicle";
+            this.cbCustomerIDAddVehicle.Size = new System.Drawing.Size(121, 24);
+            this.cbCustomerIDAddVehicle.TabIndex = 15;
+            // 
+            // cbParkingSpotIDAddVehicle
+            // 
+            this.cbParkingSpotIDAddVehicle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbParkingSpotIDAddVehicle.FormattingEnabled = true;
+            this.cbParkingSpotIDAddVehicle.Location = new System.Drawing.Point(254, 361);
+            this.cbParkingSpotIDAddVehicle.Name = "cbParkingSpotIDAddVehicle";
+            this.cbParkingSpotIDAddVehicle.Size = new System.Drawing.Size(121, 24);
+            this.cbParkingSpotIDAddVehicle.TabIndex = 16;
+            // 
+            // btnCustomerMoreDetail
+            // 
+            this.btnCustomerMoreDetail.Location = new System.Drawing.Point(391, 305);
+            this.btnCustomerMoreDetail.Name = "btnCustomerMoreDetail";
+            this.btnCustomerMoreDetail.Size = new System.Drawing.Size(110, 23);
+            this.btnCustomerMoreDetail.TabIndex = 17;
+            this.btnCustomerMoreDetail.Text = "more detail";
+            this.btnCustomerMoreDetail.UseVisualStyleBackColor = true;
+            this.btnCustomerMoreDetail.Click += new System.EventHandler(this.btnCustomerMoreDetail_Click);
+            // 
+            // btnParkingSpotMoreDetail
+            // 
+            this.btnParkingSpotMoreDetail.Location = new System.Drawing.Point(391, 362);
+            this.btnParkingSpotMoreDetail.Name = "btnParkingSpotMoreDetail";
+            this.btnParkingSpotMoreDetail.Size = new System.Drawing.Size(110, 23);
+            this.btnParkingSpotMoreDetail.TabIndex = 18;
+            this.btnParkingSpotMoreDetail.Text = "more detail";
+            this.btnParkingSpotMoreDetail.UseVisualStyleBackColor = true;
+            this.btnParkingSpotMoreDetail.Click += new System.EventHandler(this.btnParkingSpotMoreDetail_Click);
+            // 
             // FrmAddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 450);
+            this.ClientSize = new System.Drawing.Size(1020, 658);
+            this.Controls.Add(this.btnParkingSpotMoreDetail);
+            this.Controls.Add(this.btnCustomerMoreDetail);
+            this.Controls.Add(this.cbParkingSpotIDAddVehicle);
+            this.Controls.Add(this.cbCustomerIDAddVehicle);
+            this.Controls.Add(this.btnAddVehicle);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtParkingSpotIDAddVehicle);
-            this.Controls.Add(this.txtCustomerIDAddVehicle);
             this.Controls.Add(this.cbTypeOfVehicle);
             this.Controls.Add(this.txtOccupancy);
             this.Controls.Add(this.txtLicensePlate);
@@ -181,6 +222,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAddVehicle";
             this.Text = "Add Vehicle";
+            this.Load += new System.EventHandler(this.FrmAddVehicle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,9 +240,12 @@
         private System.Windows.Forms.TextBox txtLicensePlate;
         private System.Windows.Forms.TextBox txtOccupancy;
         private System.Windows.Forms.ComboBox cbTypeOfVehicle;
-        private System.Windows.Forms.TextBox txtCustomerIDAddVehicle;
-        private System.Windows.Forms.TextBox txtParkingSpotIDAddVehicle;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnAddVehicle;
+        private System.Windows.Forms.ComboBox cbCustomerIDAddVehicle;
+        private System.Windows.Forms.ComboBox cbParkingSpotIDAddVehicle;
+        private System.Windows.Forms.Button btnCustomerMoreDetail;
+        private System.Windows.Forms.Button btnParkingSpotMoreDetail;
     }
 }

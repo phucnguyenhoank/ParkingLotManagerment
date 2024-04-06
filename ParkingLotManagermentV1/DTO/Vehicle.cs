@@ -14,5 +14,15 @@ namespace DTO
         public string TypeOfVehicle { get; set; }
         public string CustomerID { get; set; }
         public string ParkingSpotID { get; set; }
+
+        public Vehicle(string vehicleID = "defaultID", string licensePlate = "defaultLicensePlate", int occupancy = 0, string typeOfVehicle = "defaultType", string customerID = "defaultCustomerID", string parkingSpotID = "defaultParkingSpotID")
+        {
+            VehicleID = vehicleID;
+            LicensePlate = licensePlate;
+            Occupancy = occupancy;
+            TypeOfVehicle = typeOfVehicle;
+            CustomerID = customerID;
+            ParkingSpotID = parkingSpotID;
+        }
     }
 }

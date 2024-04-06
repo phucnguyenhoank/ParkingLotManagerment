@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ParkingLotManagement;
+using ParkingLotManagement;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,9 @@ namespace ParkingLotManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            // Application.Run(new FrmMain());
+            Application.Run(new FrmAddContract());
+            // FrmContractList
         }
     }
 }

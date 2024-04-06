@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F6C72F15-0932-4F04-A597-FB51A175881A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ParkingLotManagerment</RootNamespace>
-    <AssemblyName>ParkingLotManagerment</AssemblyName>
+    <RootNamespace>ParkingLotManagement</RootNamespace>
+    <AssemblyName>ParkingLotManagement</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -64,11 +64,41 @@
     <Compile Include="FrmAddContract.Designer.cs">
       <DependentUpon>FrmAddContract.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmContractList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContractList.Designer.cs">
+      <DependentUpon>FrmContractList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmJobSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmJobSelector.Designer.cs">
+      <DependentUpon>FrmJobSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParkingSpotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParkingSpotList.Designer.cs">
+      <DependentUpon>FrmParkingSpotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVehicleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVehicleList.Designer.cs">
+      <DependentUpon>FrmVehicleList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,8 +111,23 @@
     <EmbeddedResource Include="FrmAddContract.resx">
       <DependentUpon>FrmAddContract.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmContractList.resx">
+      <DependentUpon>FrmContractList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmJobSelector.resx">
+      <DependentUpon>FrmJobSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParkingSpotList.resx">
+      <DependentUpon>FrmParkingSpotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVehicleList.resx">
+      <DependentUpon>FrmVehicleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -12,5 +12,13 @@ namespace DTO
         public int TotalCost { get; set; }
         public string CustomerID { get; set; }
         public string ContractID { get; set; }
+
+        public Receipt(string receiptID = "defaultID", int totalCost = 0, string customerID = "defaultCustomerID", string contractID = "defaultContractID")
+        {
+            ReceiptID = receiptID;
+            TotalCost = totalCost;
+            CustomerID = customerID;
+            ContractID = contractID;
+        }
     }
 }

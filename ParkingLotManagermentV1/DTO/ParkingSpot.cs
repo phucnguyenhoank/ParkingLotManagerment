@@ -12,5 +12,13 @@ namespace DTO
         public int BeingOccupied { get; set; }
         public string DesignatedFor { get; set; }
         public int Capacity { get; set; }
+
+        public ParkingSpot(string parkingSpotID = "defaultID", int beingOccupied = 0, string designatedFor = "defaultDesignation", int capacity = 0)
+        {
+            ParkingSpotID = parkingSpotID;
+            BeingOccupied = beingOccupied;
+            DesignatedFor = designatedFor;
+            Capacity = capacity;
+        }
     }
 }

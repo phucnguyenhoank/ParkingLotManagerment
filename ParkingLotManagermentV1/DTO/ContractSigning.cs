@@ -10,5 +10,10 @@ namespace DTO
     {
         public string VehicleID { get; set; }
         public string ContractID { get; set; }
+        public ContractSigning(string vehicleID = "defaultVehicleID", string contractID = "defaultContractID")
+        {
+            VehicleID = vehicleID;
+            ContractID = contractID;
+        }
     }
 }

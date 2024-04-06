@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contract.cs" />
-    <Compile Include="ContractDetails.cs" />
+    <Compile Include="ContractDetail.cs" />
     <Compile Include="ContractSigning.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Employee.cs" />
@@ -55,7 +55,7 @@
     <Compile Include="RentalContract.cs" />
     <Compile Include="Specialization.cs" />
     <Compile Include="Vehicle.cs" />
-    <Compile Include="WorkSkills.cs" />
+    <Compile Include="WorkSkill.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

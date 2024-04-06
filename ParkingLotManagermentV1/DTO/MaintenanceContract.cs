@@ -10,5 +10,11 @@ namespace DTO
     {
         public string ContractID { get; set; }
         public int WarrantyDurationInMonths { get; set; }
+
+        public MaintenanceContract(string contractID = "defaultID", int warrantyDurationInMonths = 0)
+        {
+            ContractID = contractID;
+            WarrantyDurationInMonths = warrantyDurationInMonths;
+        }
     }
 }

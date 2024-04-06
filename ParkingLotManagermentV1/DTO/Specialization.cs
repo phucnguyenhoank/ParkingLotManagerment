@@ -10,5 +10,11 @@ namespace DTO
     {
         public string SpecializationID { get; set; }
         public string SpecializationName { get; set; }
+
+        public Specialization(string specializationID = "defaultID", string specializationName = "defaultName")
+        {
+            SpecializationID = specializationID;
+            SpecializationName = specializationName;
+        }
     }
 }

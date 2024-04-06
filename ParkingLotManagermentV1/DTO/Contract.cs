@@ -14,5 +14,16 @@ namespace DTO
         public int RentalDurationInDays { get; set; }
         public int Price { get; set; }
         public int PaymentStatus { get; set; }
+
+        public Contract(string contractID = "defaultID", DateTime rentalStartDate = default(DateTime), DateTime rentalEndDate = default(DateTime), int rentalDurationInDays = 0, int price = 0, int paymentStatus = 0)
+        {
+            ContractID = contractID;
+            RentalStartDate = rentalStartDate;
+            RentalEndDate = rentalEndDate;
+            RentalDurationInDays = rentalDurationInDays;
+            Price = price;
+            PaymentStatus = paymentStatus;
+        }
     }
+
 }

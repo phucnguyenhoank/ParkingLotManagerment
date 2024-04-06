@@ -42,8 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessHelperDAL.cs" />
+    <Compile Include="ContractDAL.cs" />
+    <Compile Include="ContractDetailDAL.cs" />
+    <Compile Include="ContractSigningDAL.cs" />
+    <Compile Include="CustomerDAL.cs" />
+    <Compile Include="JobDAL.cs" />
+    <Compile Include="MaintenanceContractDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentalContractDAL.cs" />
     <Compile Include="SharedConnectionString.cs" />
+    <Compile Include="VehicleDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

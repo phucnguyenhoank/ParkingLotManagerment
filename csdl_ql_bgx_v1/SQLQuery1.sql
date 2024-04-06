@@ -105,7 +105,7 @@ create table Job (
 	foreign key (SpecializationID) references Specialization(SpecializationID)
 )
 
-create table WorkSkills (
+create table WorkSkill (
 	EmployeeID varchar(100), 
 	JobID varchar(100),
 	primary key (EmployeeID, JobID),
@@ -133,7 +133,7 @@ create table ContractSigning (
 	foreign key (ContractID) references Contract(ContractID)
 )
 
-create table ContractDetails (
+create table ContractDetail (
 	ContractID varchar(100), 
 	JobID varchar(100), 
 	CustomerID varchar(100), 
@@ -144,25 +144,6 @@ create table ContractDetails (
 	foreign key (CustomerID) references Customer(CustomerID)
 )
 
-go
-
-CREATE TRIGGER CalculateWage
-ON ContractDetails
-AFTER INSERT
-AS
-BEGIN
-    SET NOCOUNT ON;
-    
-    DECLARE @job_value DECIMAL(5,2);
-    
-    -- Update the wage for each inserted row
-    UPDATE ContractDetails
-    SET @job_value = Job.JobValue,
-        Wage = Job.JobValue * 0.1
-    FROM ContractDetails
-    INNER JOIN Job ON ContractDetails.JobID = Job.JobID
-    WHERE ContractDetails.ContractID IN (SELECT ContractID FROM INSERTED);
-END;
 go
 
 
@@ -302,8 +283,8 @@ VALUES
 
 
 
--- Inserting data into the WorkSkills table
-INSERT INTO WorkSkills (EmployeeID, JobID) 
+-- Inserting data into the WorkSkill table
+INSERT INTO WorkSkill (EmployeeID, JobID) 
 VALUES
 ('E001', 'J001'),
 ('E002', 'J002'),
@@ -329,8 +310,8 @@ VALUES
 ('V004', 'CN004')
 
 -- Wage will be calculated in the future
--- Inserting data into the ContractDetails table
-INSERT INTO ContractDetails (ContractID, JobID, CustomerID) 
+-- Inserting data into the ContractDetail table
+INSERT INTO ContractDetail (ContractID, JobID, CustomerID) 
 VALUES
 ('CN001', 'J001', 'C001'),
 ('CN001', 'J002', 'C001'),
@@ -345,11 +326,16 @@ go
 */
 
 
--- Test
-use ParkingLotManagement;
+
+
+
+use ParkingLotManagement
 
 select *
-from ContractDetails;
+from ContractDetail
+
+select *
+from ContractSigning
 
 
 
